@@ -1,0 +1,51 @@
+﻿@using System.Drawing
+@using Groupdocs.Web.UI
+
+@{
+    ViewBag.Title = "File Upload Using GroupDocs Viewer";
+    var FileName = ViewBag.FileName;
+}
+<h1>Please browse a file to Upload</h1>
+@using (Html.BeginForm("Index", "Home", FormMethod.Post, new { id = "FileInputForm", enctype = "multipart/form-data" }))
+{
+    <input type="file" name="file" id="inputFile" />
+    <input type="submit" name="Submit" id="SubmitBtn" value="Upload" />
+}
+
+@if (FileName != null)
+{
+    <p>
+        <h1>View below the currently uploaded file using GroupDocs Viewer</h1>
+    </p>
+
+    <div id="test" style="margin-bottom:20px"></div>
+
+    //Client side viewer code.
+    //TargetElementSelector Method receives Div Id as parameter
+    //FilePath Method receives File Name as parameter
+
+    @(Html.ViewerClientCode()
+    .TargetElementSelector("#test")
+    .FilePath(FileName)
+    .ZoomToFitWidth(true)
+    .Width(1200)
+    .Height(900)
+    .ShowThumbnails(false)
+    .DownloadPdfFileIfPossible()
+    .PreloadPagesCount(1)
+    .UseHtmlBasedEngine())
+}
+
+<script type="text/javascript">
+    $(document).ready(function (e) {
+        $('#SubmitBtn').bind('click', function (x) {
+
+            if ($('#inputFile').val() == '') {
+                alert('Please choose a file to upload');
+                return false;
+            }
+
+            $('#FileInputForm').submit();
+        });
+    });
+</script>
