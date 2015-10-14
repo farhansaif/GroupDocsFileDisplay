@@ -202,7 +202,6 @@
     <Content Include="Global.asax" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
-    <None Include="Properties\PublishProfiles\GroupDocsFileDisplayProfile.pubxml" />
     <None Include="Scripts\jquery-1.6.4-vsdoc.js" />
     <Content Include="Scripts\jquery-1.6.4.js" />
     <Content Include="Scripts\jquery-1.6.4.min.js" />
