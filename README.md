@@ -15,4 +15,8 @@ This application is Built on .Net Framework 4.0 & MVC 4. Download the source cod
 - Select Empty ASP.NET MVC 4 Web Application and .Net Framework 4.0.
 - Once the new project with the solution is opened in the Visual Studio, delete and existing project and leave the Solution File.
 - Now add the Existing Project  to the Solution i.e. select Project file from the download Project folder.
+- DLLs folder in the solution contains Groupdocs.Viewer.dll. This needs to be referenced in the Project.
 - Use Nuget to add missing references.
+- Open the Package Manager Console and execute the following command 
+
+    Install-Package Microsoft.AspNet.SignalR -Version 1.1.3
