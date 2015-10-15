@@ -31,4 +31,4 @@ This application is Built on .Net Framework 4.0 & MVC 4. Download the source cod
     
 - Include the packages folder and packages.config file in the project
 
-For more information please read [Technical Article](https://github.com/farhansaif/GroupDocsFileDisplay/wiki/Technical-Article) on Groupdocs Viewer
+For more information please read [Technical Article](https://github.com/farhansaif/GroupDocsFileDisplay/wiki/Technical-Article) on Groupdocs Viewer to display documents.
